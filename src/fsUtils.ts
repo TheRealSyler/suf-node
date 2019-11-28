@@ -1,7 +1,7 @@
-import { readdir, stat } from 'fs';
+import { readdir, stat, exists } from 'fs';
 import { resolve } from 'path';
 
-export function Walk(dir: string) {
+export async function Walk(dir: string) {
   return new Promise<string[]>((_resolve, reject) => {
     let results: string[] = [];
     readdir(dir, function(err, list) {
@@ -30,6 +30,14 @@ export function Walk(dir: string) {
           }
         });
       });
+    });
+  });
+}
+
+export async function Exits(path: string) {
+  return new Promise<boolean>(res => {
+    exists(path, exists => {
+      res(exists);
     });
   });
 }
