@@ -1,6 +1,9 @@
 import { readdir, stat, exists } from 'fs';
 import { resolve } from 'path';
 
+/**
+ * Returns an array with all the file names in the given directory
+ */
 export async function Walk(dir: string) {
   return new Promise<string[]>((_resolve, reject) => {
     let results: string[] = [];
