@@ -1,5 +1,4 @@
 lib
 node_modules
 tsconfig.tsbuildinfo
-package-lock.json
-suf-0.0.1.tgz
+*.tgz
