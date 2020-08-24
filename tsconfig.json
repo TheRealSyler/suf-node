@@ -2,7 +2,7 @@
   "exclude": ["node_modules", "lib"],
   "compilerOptions": {
     "outDir": "./lib",
-    "strict": false,
+    "strict": true,
     "esModuleInterop": true,
     "rootDir": "./src",
     "target": "es5",
@@ -11,6 +11,7 @@
     "importHelpers": true,
     "noEmitHelpers": true,
     "declaration": true,
+
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
     "lib": ["es6", "es7", "dom", "es2017"]
