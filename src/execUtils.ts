@@ -1,13 +1,13 @@
 import { exec } from 'child_process';
 
-interface ExecOptions {
+export interface ExecOptions {
   linkStdout: boolean;
 }
 
-type ExecOut = {
+export interface ExecOut {
   stdout: string;
   stderr: string;
-};
+}
 
 export async function Exec(command: string, options?: ExecOptions): Promise<ExecOut> {
   return new Promise((res, rej) => {

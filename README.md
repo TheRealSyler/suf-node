@@ -9,6 +9,8 @@
 
 - **[execUtils](#executils)**
 
+  - [ExecOptions](#execoptions)
+  - [ExecOut](#execout)
   - [Exec](#exec)
 
 - **[fsUtils](#fsutils)**
@@ -32,13 +34,27 @@ function getYNAnswer(): Promise<boolean>;
 
 ### execUtils
 
-##### Exec
+##### ExecOptions
 
 ```typescript
-function Exec(command: string): Promise<{
+interface ExecOptions {
+    linkStdout: boolean;
+}
+```
+
+##### ExecOut
+
+```typescript
+interface ExecOut {
     stdout: string;
     stderr: string;
 }
+```
+
+##### Exec
+
+```typescript
+function Exec(command: string, options?: ExecOptions): Promise<ExecOut>;
 ```
 
 ### fsUtils
