@@ -1,5 +1,5 @@
 export async function readConsole() {
-  return new Promise<string>(res => {
+  return new Promise<string>((res) => {
     const stdin = process.openStdin();
     const l = (input: string[]) => {
       stdin.pause();
@@ -10,13 +10,17 @@ export async function readConsole() {
   });
 }
 
-export async function getYNAnswer(): Promise<boolean> {
+export async function getYNAnswer(defaultAnswer = true): Promise<boolean> {
   const answer = await readConsole();
-  if (/^$|^y$/i.test(answer)) {
-    return true;
-  } else if (/n/i.test(answer)) {
-    return false;
-  } else {
-    return getYNAnswer();
+  if (/^$/.test(answer)) {
+    return defaultAnswer;
   }
+  if (/^y$/i.test(answer)) {
+    return true;
+  }
+  if (/n/i.test(answer)) {
+    return false;
+  }
+
+  return getYNAnswer();
 }

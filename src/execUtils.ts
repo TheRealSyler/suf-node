@@ -1,7 +1,7 @@
 import { exec } from 'child_process';
 
 export interface ExecOptions {
-  linkStdout: boolean;
+  linkStdout?: boolean;
 }
 
 export interface ExecOut {

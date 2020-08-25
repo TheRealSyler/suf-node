@@ -1,6 +1,6 @@
 {
   "name": "suf-node",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "utility functions.",
   "files": [
     "lib",
@@ -11,6 +11,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
+    "start": "tsc -w",
     "prepack": "del ./lib && tsc -b && suf"
   },
   "author": "Syler",
