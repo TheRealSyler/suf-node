@@ -29,7 +29,7 @@ function readConsole(): Promise<string>;
 ##### getYNAnswer
 
 ```typescript
-function getYNAnswer(): Promise<boolean>;
+function getYNAnswer(defaultAnswer?: boolean): Promise<boolean>;
 ```
 
 ### execUtils
@@ -38,7 +38,7 @@ function getYNAnswer(): Promise<boolean>;
 
 ```typescript
 interface ExecOptions {
-    linkStdout: boolean;
+    linkStdout?: boolean;
 }
 ```
 
