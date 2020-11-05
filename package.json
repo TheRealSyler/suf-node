@@ -18,7 +18,6 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^12.12.11",
-    "ts-doc-gen": "^0.1.1",
     "del-cli": "^3.0.1",
     "suf-cli": "^0.1.0",
     "tslib": "^1.10.0",
