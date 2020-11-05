@@ -1,7 +1,7 @@
 {
   "name": "suf-node",
-  "version": "1.2.1",
-  "description": "utility functions.",
+  "version": "1.2.2",
+  "description": "node utility functions.",
   "files": [
     "lib",
     "README.md"
@@ -19,15 +19,13 @@
   "devDependencies": {
     "@types/node": "^12.12.11",
     "ts-doc-gen": "^0.1.1",
+    "del-cli": "^3.0.1",
+    "suf-cli": "^0.1.0",
     "tslib": "^1.10.0",
     "typescript": "^3.5.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/TheRealSyler/suf-node"
-  },
-  "dependencies": {
-    "del-cli": "^3.0.1",
-    "suf-cli": "^0.1.0"
   }
 }
