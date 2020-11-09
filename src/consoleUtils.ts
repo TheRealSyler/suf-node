@@ -15,10 +15,10 @@ export async function getYNAnswer(defaultAnswer = true): Promise<boolean> {
   if (/^$/.test(answer)) {
     return defaultAnswer;
   }
-  if (/^y$/i.test(answer)) {
+  if (/^y/i.test(answer)) {
     return true;
   }
-  if (/n/i.test(answer)) {
+  if (/^n/i.test(answer)) {
     return false;
   }
 
