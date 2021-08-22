@@ -1,5 +1,5 @@
 import { readdir, stat, exists } from 'fs';
-import { basename, resolve } from 'path';
+import { resolve } from 'path';
 
 /**
  * Returns an array with all the file names in the given directory
