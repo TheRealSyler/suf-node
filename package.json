@@ -1,6 +1,6 @@
 {
   "name": "suf-node",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "node utility functions.",
   "files": [
     "lib",

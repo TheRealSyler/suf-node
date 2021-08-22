@@ -46,8 +46,3 @@ export async function Exits(path: string) {
     });
   });
 }
-
-
-(async () => {
-  console.log(await Walk('.'))
-})()
