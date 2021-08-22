@@ -1,5 +1,5 @@
 import { readdir, stat, exists } from 'fs';
-import { resolve } from 'path';
+import { basename, resolve } from 'path';
 
 /**
  * Returns an array with all the file names in the given directory
@@ -7,16 +7,16 @@ import { resolve } from 'path';
 export async function Walk(dir: string) {
   return new Promise<string[]>((_resolve, reject) => {
     let results: string[] = [];
-    readdir(dir, function(err, list) {
+    readdir(dir, (err, list) => {
       if (err) return reject(err);
       let pending = list.length;
       let completed = true;
       if (!pending) {
         return _resolve(list);
       }
-      list.forEach(function(file) {
+      list.forEach((file) => {
         file = resolve(dir, file);
-        stat(file, async function(err, stat) {
+        stat(file, async (err, stat) => {
           if (err) return reject(err);
           if (stat && stat.isDirectory()) {
             completed = false;
@@ -26,7 +26,7 @@ export async function Walk(dir: string) {
               return _resolve(results);
             }
           } else {
-            results.push(file);
+            results.push(basename(file));
             if (!--pending && completed) {
               return _resolve(results);
             }
