@@ -1,7 +1,9 @@
 {
   "exclude": [
     "node_modules",
-    "lib"
+    "lib",
+    "suf.config.ts",
+    "src/tests"
   ],
   "compilerOptions": {
     "outDir": "./lib",

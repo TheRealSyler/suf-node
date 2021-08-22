@@ -1,6 +1,12 @@
+Node Helper functions.
+
+<span id="BADGE_GENERATION_MARKER_0"></span>
+[![codecov](https://codecov.io/gh/TheRealSyler/suf-node/branch/master/graph/badge.svg)](https://codecov.io/gh/TheRealSyler/suf-node) [![githubIssues](https://img.shields.io/github/issues/TheRealSyler/suf-node)](https://github.com/TheRealSyler/suf-node) [![npmV](https://img.shields.io/npm/v/suf-node)](https://www.npmjs.com/package/suf-node)
+<span id="BADGE_GENERATION_MARKER_1"></span>
+
 <span id="DOC_GENERATION_MARKER_0"></span>
 
-# SUF Node
+# suf Node Functions
 
 - **[consoleUtils](#consoleutils)**
 
@@ -22,13 +28,13 @@
 
 ##### readConsole
 
-```typescript
+```ts
 function readConsole(): Promise<string>;
 ```
 
 ##### getYNAnswer
 
-```typescript
+```ts
 function getYNAnswer(defaultAnswer?: boolean): Promise<boolean>;
 ```
 
@@ -36,7 +42,7 @@ function getYNAnswer(defaultAnswer?: boolean): Promise<boolean>;
 
 ##### ExecOptions
 
-```typescript
+```ts
 interface ExecOptions {
     linkStdout?: boolean;
 }
@@ -44,7 +50,7 @@ interface ExecOptions {
 
 ##### ExecOut
 
-```typescript
+```ts
 interface ExecOut {
     stdout: string;
     stderr: string;
@@ -53,7 +59,7 @@ interface ExecOut {
 
 ##### Exec
 
-```typescript
+```ts
 function Exec(command: string, options?: ExecOptions): Promise<ExecOut>;
 ```
 
@@ -61,16 +67,13 @@ function Exec(command: string, options?: ExecOptions): Promise<ExecOut>;
 
 ##### Walk
 
-```typescript
-/**
- * Returns an array with all the file names in the given directory
- */
+```ts
 function Walk(dir: string): Promise<string[]>;
 ```
 
 ##### Exits
 
-```typescript
+```ts
 function Exits(path: string): Promise<boolean>;
 ```
 

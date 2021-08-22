@@ -12,19 +12,42 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "tsc -w",
+    "test": "jest --coverage",
     "prepack": "del-cli ./lib && tsc -b && suf"
   },
   "author": "Syler",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/node": "^12.12.11",
     "del-cli": "^3.0.1",
-    "suf-cli": "^0.1.0",
+    "jest": "^27.0.6",
+    "suf-cli": "^0.3.0",
+    "ts-jest": "^27.0.5",
     "tslib": "^2.3.1",
     "typescript": "^3.5.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/TheRealSyler/suf-node"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx",
+      "node"
+    ],
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
   }
 }
